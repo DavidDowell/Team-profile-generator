@@ -1,0 +1,10 @@
+:root {
+    margin: 0;
+    padding: 0;
+}
+.card {
+    width:fit-content;
+}
+.team {
+    margin-top: 40px;
+}
