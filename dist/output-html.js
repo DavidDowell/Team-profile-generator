@@ -2,7 +2,7 @@ const generateTeam = (team) => {
     const generateManager = (manager) => {
         return `
         <div class="col-3 rounded mt-4 ml-3">
-            <h3 class="text-center bg-primary w-100 text-light rounded m-0">${manager.getName()} ${manager.getRole()}</h3>
+            <h3 class="text-center bg-primary w-100 text-light rounded m-0">${manager.getName()} <br>${manager.getRole()}</br>🎩</h3>
             <ul class="list-group">
                 <li class="list-group-item">ID: ${manager.getID()}</li>
                 <li class="list-group-item"><a href="mailto:${manager.getEmail()}">Email: ${manager.getEmail()}</a></li>
@@ -14,7 +14,7 @@ const generateTeam = (team) => {
     const generateEngineer = (engineer) => {
         return `
         <div class=" col-3 rounded mt-4 ml-3">
-            <h3 class="text-center bg-primary w-100 text-light rounded m-0">${engineer.getName()} ${engineer.getrole()}</h3>
+            <h3 class="text-center bg-primary w-100 text-light rounded m-0">${engineer.getName()} <br>${engineer.getRole()}</br>🚂</h3>
             <li class="list-group-item">ID: ${engineer.getID()}</li>
             <li class="list-group-item"><a href="mailto:${engineer.getEmail()}">Email: ${engineer.getEmail()}</a></li>
             <li class="list-group-item"><a href="${engineer.getGitHub()}">GitHub: ${engineer.getGitHub()}</a></li>
@@ -24,7 +24,7 @@ const generateTeam = (team) => {
     const generateIntern = (intern) => {
         return `
         <div class=" col-3 rounded mt-4 ml-3">
-            <h3 class="text-center bg-primary w-100 text-light rounded m-0">${intern.getName()} ${intern.getRole()}</h3>
+            <h3 class="text-center bg-primary w-100 text-light rounded m-0">${intern.getName()} <br>${intern.getRole()}</br>🎓</h3>
             <li class="list-group-item">ID: ${intern.getID()}</li>
             <li class="list-group-item"><a href="mailto:${intern.getEmail()}">Email: ${intern.getEmail()}</a></li>
             <li class="list-group-item">School: ${intern.getSchool()}</a></li>
@@ -72,7 +72,7 @@ module.exports = (team) => {
     <div class="col-12 navbar bg-info hero">
         <h1 class="w-100 text-center text-light">My Team</h1>
     </div>
-    <div class="col-12 d-flex justify-content-center team">
+    <div class="col-12 d-flex flex-wrap justify-content-center team">
         ${generateTeam(team)}
     </div>
 
